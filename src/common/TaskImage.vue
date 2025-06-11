@@ -7,8 +7,8 @@ const props = defineProps<{ task: Task; isInGarden?: boolean }>()
 const route = useRoute()
 
 const getImage = () => {
-  if (props.task.status === 'Just started!') return '/sprouts/sprout1.png'
-  if (props.task.status === 'In progress!') return '/stems/stem1.png'
+  if (props.task.status === 'Just started!') return 'sprouts/sprout1.png'
+  if (props.task.status === 'In progress!') return 'stems/stem1.png'
   return props.task.selectedFlower
 }
 </script>

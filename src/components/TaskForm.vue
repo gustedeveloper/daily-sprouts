@@ -7,8 +7,7 @@ import type { Task } from '@/types'
 
 const defaultFlower = flowers[0] || ''
 const maxLength = 100
-
-let newTask = reactive<Pick<Task, 'title' | 'status' | 'selectedFlower'>>({
+const newTask = reactive<Pick<Task, 'title' | 'status' | 'selectedFlower'>>({
   title: '',
   status: '',
   selectedFlower: defaultFlower,
@@ -53,7 +52,7 @@ const tasks = useTasksStore()
           label="Choose a flower:"
         />
       </div>
-      <button class="pixel-button add"><img class="button-img" :src="'/icons/add.png'"</button>
+      <button class="pixel-button add"><img class="button-img" :src="'icons/add.png'" /></button>
     </div>
   </form>
 </template>
@@ -105,7 +104,6 @@ const tasks = useTasksStore()
   align-items: flex-end;
 }
 
-
 .task-selection-options {
   display: flex;
   gap: 50px;
@@ -121,7 +119,6 @@ const tasks = useTasksStore()
 @media (max-width: 600px) {
   .form-container {
     width: 350px;
-   
   }
 }
 </style>

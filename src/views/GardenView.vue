@@ -1,9 +1,9 @@
-<script setup>
-import Garden from '@/components/Garden.vue'
+<script setup lang="ts">
+import GardenComponent from '@/components/GardenComponent.vue'
 </script>
 
 <template>
-  <Garden />
+  <GardenComponent />
 </template>
 
 <style scoped></style>

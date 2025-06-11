@@ -25,9 +25,11 @@ const restoreTask = (taskId: string) => {
           <TaskImage :task="task" :isInGarden="false" />
           <div class="task-actions">
             <button class="pixel-button restore" @click="restoreTask(task.id)">
-              <img :src="'/icons/list-green.png'" />
+              <img :src="'icons/list-green.png'" />
             </button>
-            <button class="pixel-button delete" @click="tasks.deleteTask(task.id)"><img class="button-img" :src="'/icons/delete.png'"</button>
+            <button class="pixel-button delete" @click="tasks.deleteTask(task.id)">
+              <img class="button-img" :src="'icons/delete.png'" />
+            </button>
           </div>
         </div>
       </li>

@@ -6,12 +6,12 @@ import CustomImageSelector from '@/common/CustomImageSelector.vue'
 import { useGardenStore } from '@/stores/garden'
 
 const backgroundOptions = [
-  '/backgrounds/sunrise.png',
-  '/backgrounds/day.png',
-  '/backgrounds/sunset.png',
-  '/backgrounds/forest.png',
-  '/backgrounds/night.png',
-  '/backgrounds/mountains-night.png',
+  'backgrounds/sunrise.png',
+  'backgrounds/day.png',
+  'backgrounds/sunset.png',
+  'backgrounds/forest.png',
+  'backgrounds/night.png',
+  'backgrounds/mountains-night.png',
 ]
 
 const gardenStore = useGardenStore()
