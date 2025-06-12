@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { ref } from 'vue'
+import LoadingSprout from './common/LoadingSprout.vue'
+import { loadAssets } from './utils/loadAssets.util'
+
+const isLoading = ref(true)
 </script>
 
 <template>
@@ -8,23 +13,32 @@ import { RouterLink, RouterView } from 'vue-router'
     <img src="/backgrounds/bg.png" class="sky" />
   </div>
 
-  <header>
-    <nav>
-      <div class="logo">
-        <img class="logo-image" src="/logo.png" alt="Daily Sprout logo" />
-      </div>
-      <div class="nav-links">
-        <RouterLink to="/" class="nav-link pixel-button">Home</RouterLink>
-        <RouterLink to="/task-management" class="nav-link pixel-button management"
-          >Task Management</RouterLink
-        >
-        <RouterLink to="/garden" class="nav-link pixel-button">Garden</RouterLink>
-        <RouterLink to="/about" class="nav-link pixel-button">About</RouterLink>
-      </div>
-    </nav>
-  </header>
+  <LoadingSprout
+    v-if="isLoading"
+    class="loading-overlay"
+    :load-assets="loadAssets"
+    @finished="isLoading = false"
+  />
 
-  <RouterView />
+  <div v-show="!isLoading">
+    <header>
+      <nav>
+        <div class="logo">
+          <img class="logo-image" src="/logo.png" alt="Daily Sprout logo" />
+        </div>
+        <div class="nav-links">
+          <RouterLink to="/" class="nav-link pixel-button">Home</RouterLink>
+          <RouterLink to="/task-management" class="nav-link pixel-button management"
+            >Task Management</RouterLink
+          >
+          <RouterLink to="/garden" class="nav-link pixel-button">Garden</RouterLink>
+          <RouterLink to="/about" class="nav-link pixel-button">About</RouterLink>
+        </div>
+      </nav>
+    </header>
+
+    <RouterView />
+  </div>
 </template>
 
 <style>
