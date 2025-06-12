@@ -50,23 +50,6 @@ const getImage = () => {
   height: 50px;
 }
 
-.fade-grow-enter-active,
-.fade-grow-leave-active {
-  transition: all 0.6s ease;
-}
-
-.fade-grow-enter-from,
-.fade-grow-leave-to {
-  opacity: 0;
-  transform: scale(0.7);
-}
-
-.fade-grow-enter-to,
-.fade-grow-leave-from {
-  opacity: 1;
-  transform: scale(1);
-}
-
 .tooltip-wrapper {
   position: relative;
   display: inline-block;
