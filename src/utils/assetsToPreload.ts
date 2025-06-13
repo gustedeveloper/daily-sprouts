@@ -24,8 +24,9 @@ const logoImage = 'logo.png'
 export const allAssets = [
   ...flowerImages,
   ...backgroundImages,
-  ...sproutImage,
-  ...stemImage,
-  ...logoImage,
-  ...avatarImage,
+  sproutImage,
+  stemImage,
+  flowerImage,
+  logoImage,
+  avatarImage,
 ]
