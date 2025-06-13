@@ -17,6 +17,8 @@ export const stemImage = 'stems/stem1.png'
 
 export const flowerImage = 'flowers/flower4.png'
 
+const avatarImage = 'avatar.png'
+
 const logoImage = 'logo.png'
 
 export const allAssets = [
@@ -25,4 +27,5 @@ export const allAssets = [
   ...sproutImage,
   ...stemImage,
   ...logoImage,
+  ...avatarImage,
 ]
